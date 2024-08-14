@@ -24,6 +24,14 @@ class TaskPolicy
         return $user->id === $task->user_id;
     }
 
+    /**
+     * Determine whether the user can create the model.
+     */
+    public function create(User $user): bool
+    {
+        return true;
+    }
+
 
     /**
      * Determine whether the user can update the model.
